@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Bem Estar | Cuidado médico humano e moderno</title>
+  <meta name="description" content="Agende sua consulta online com facilidade. Atendimento humanizado, moderno e acolhedor.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Tela de carregamento -->
+  <div id="loading-screen"><div class="spinner"></div></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fa-solid fa-staff-snake"></i> Clínica Bem Estar</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="pages/login.html" class="btn btn-outline btn-sm">Entrar</a>
+        <a href="pages/login.html" class="btn btn-primary btn-sm">Agendar Consulta</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>Cuidado médico que <span>coloca você em primeiro lugar</span></h1>
+        <p>Atendimento humanizado, agenda flexível e acompanhamento contínuo da sua saúde — tudo em um só lugar.</p>
+        <div class="hero-actions">
+          <a href="pages/login.html" class="btn btn-primary">Agendar Consulta</a>
+          <a href="#sobre" class="btn btn-outline">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80" alt="Médica sorrindo em consultório moderno">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CARROSSEL ===================== -->
+  <section class="carousel-section">
+    <div class="container">
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide">
+            <div>
+              <h3>Clínica Geral & Psiquiatria</h3>
+              <p>Prevenção e cuidado contínuo para todas as fases da vida.</p>
+              <a href="pages/login.html" class="btn btn-primary btn-sm">Agendar</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=500&q=80" alt="Consulta cardiológica">
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <h3>"Sua saúde merece atenção todos os dias."</h3>
+              <p>Acompanhamento próximo, exames e retornos facilitados pelo sistema online.</p>
+              <a href="pages/login.html" class="btn btn-primary btn-sm">Agendar</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=500&q=80" alt="Consultório acolhedor">
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <h3>Agende em poucos cliques</h3>
+              <p>Escolha o dia e horário ideais direto pelo site, sem burocracia.</p>
+              <a href="pages/login.html" class="btn btn-primary btn-sm">Agendar</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?w=500&q=80" alt="Agenda digital de consultas">
+          </div>
+        </div>
+        <button class="carousel-arrow prev" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-arrow next" aria-label="Próximo slide"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="carousel-controls" id="carousel-controls"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&q=80" alt="Dra. Ana Paula Ribeiro">
+      <div>
+        <h2>Dra. Luana Amamura</h2>
+        <p>Com mais de 15 anos de experiência, a Dra. Luana Amamura une conhecimento técnico e escuta atenta para oferecer um cuidado médico completo, próximo e humano — do diagnóstico ao acompanhamento contínuo.</p>
+        <div class="about-values">
+          <div class="card"><i class="fa-solid fa-heart-pulse"></i><h4>Missão</h4><p>Cuidar com excelência e empatia.</p></div>
+          <div class="card"><i class="fa-solid fa-eye"></i><h4>Visão</h4><p>Ser referência em atendimento humanizado.</p></div>
+          <div class="card"><i class="fa-solid fa-hand-holding-heart"></i><h4>Valores</h4><p>Ética, acolhimento e transparência.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ESPECIALIDADES ===================== -->
+  <section class="specialties-section" id="especialidades">
+    <div class="container">
+      <h2 class="text-center">Especialidades</h2>
+      <div class="specialties-grid">
+        <div class="card specialty-card">
+  <i class="fa-solid fa-brain"></i>
+  <h4>Saúde Mental</h4>
+  <p>Cuidado e suporte emocional para o seu bem-estar psíquico.</p>
+</div>
+
+<div class="card specialty-card">
+  <i class="fa-solid fa-stethoscope"></i>
+  <h4>Clínica Geral</h4>
+  <p>Atendimento integral e contínuo para toda a família.</p>
+</div>
+
+<div class="card specialty-card">
+  <i class="fa-solid fa-head-side-virus"></i>
+  <h4>Psiquiatria</h4>
+  <p>Diagnóstico, tratamento e prevenção de transtornos mentais.</p>
+</div>
+
+<div class="card specialty-card">
+  <i class="fa-solid fa-heart-pulse"></i>
+  <h4>Humanista</h4>
+  <p>Abordagem acolhedora que enxerga o paciente além da doença.</p>
+</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section class="testimonials-section" id="depoimentos">
+    <div class="container">
+      <h2>O que dizem nossos pacientes</h2>
+      <div class="testimonial-track">
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Atendimento excelente, agendamento super fácil pelo site."</p><strong>— Mariana S.</strong></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Me senti acolhido do início ao fim. Recomendo muito."</p><strong>— Carlos E.</strong></div>
+        <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Profissionalismo e carinho em cada consulta."</p><strong>— Juliana R.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <div>
+        <h2>Fale Conosco</h2>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-phone"></i> (11) 99999-9999</li>
+          <li><i class="fa-brands fa-whatsapp"></i> Agende pelo WhatsApp</li>
+          <li><i class="fa-solid fa-envelope"></i> contato@clinicabemestar.com.br</li>
+          <li><i class="fa-solid fa-location-dot"></i>R. Carlos Guimarães, 191 - Vila Nova, Fartura - SP</li>
+        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9229896982856!2d-49.51214242376494!3d-23.39100305535749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1a5699e8b0e8f%3A0xf29f881d297c6567!2sCasa%20Grande%20-%20Espa%C3%A7os%20Comerciais!5e0!3m2!1spt-BR!2sbr!4v1785765767268!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <form id="contact-form" class="card">
+      
+ <form id="contact-form" class="card">
+<div class="form-group">
+    <label for="contact-nome">Nome</label>
+    <input type="text" id="contact-nome" class="form-control" placeholder="Ex: Maria Silva" required>
+</div>
+
+<div class="form-group">
+    <label for="contact-email">E-mail</label>
+    <input type="email" id="contact-email" class="form-control" placeholder="Ex: mariasilva@gmail.com" required>
+</div>
+
+<div class="form-group">
+    <label for="contact-msg">Mensagem</label>
+    <textarea id="contact-msg" class="form-control" rows="4" placeholder="Ex: Olá, preciso de atendimento específico!" required></textarea>
+</div>
+
+    <button type="submit" class="btn btn-primary">
+        Enviar mensagem
+    </button>
+</form>
+
+
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><i class="fa-solid fa-staff-snake"></i> Clínica Bem Estar</a>
+        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--color-gray-400);">Cuidado médico humano e moderno.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/ryansmotta27"
+   target="_blank"
+   aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+
+          <a href="https://www.facebook.com/ryansmotta27"
+   target="_blank"
+   aria-label="Facebook">
+    <i class="fa-brands fa-facebook"></i>
+</a>
+
+          <a href="https://wa.me/5514998894962?text=Ol%C3%A1%2C%20gostaria%20de%20um%20atendimento%20pelo%20WhatsApp."
+   target="_blank"
+   aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+        </div>
+      </div>
+      <div><h4>Navegação</h4><a href="#sobre">Sobre</a><br><a href="#especialidades">Especialidades</a><br><a href="#contato">Contato</a></div>
+      <div><h4>Conta</h4><a href="pages/login.html">Entrar</a><br><a href="pages/cadastro.html">Cadastrar</a></div>
+      <div><h4>Contato</h4><a href="tel:+5511999999999">(11) 99999-9999</a><br><a href="mailto:contato@clinicabemestar.com.br">contato@clinicabemestar.com.br</a></div>
+    </div>
+    <p class="footer-bottom">© 2026 Clínica Bem Estar. Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="js/utils/toast.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/app.js"></script>
+  <!-- <script src="js/pages/home.js"></script> -->
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("contact-form");
+    const modal = document.getElementById("confirmModal");
+    const preview = document.getElementById("preview");
+
+    let mensagemWhatsapp = "";
+
+    form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const nome = document.getElementById("contact-nome").value.trim();
+        const email = document.getElementById("contact-email").value.trim();
+        const mensagem = document.getElementById("contact-msg").value.trim();
+
+        mensagemWhatsapp =
+`Olá, gostaria de um atendimento.
+
+ Nome: ${nome}
+
+ E-mail: ${email}
+
+ Mensagem:
+${mensagem}`;
+
+        preview.innerHTML = `
+<b>Nome:</b> ${nome}<br><br>
+<b>E-mail:</b> ${email}<br><br>
+<b>Mensagem:</b><br>${mensagem}
+`;
+
+        modal.classList.add("show");
+
+    });
+
+    document.getElementById("cancelBtn").onclick = () =>{
+        modal.classList.remove("show");
+    }
+
+    document.getElementById("confirmBtn").onclick = () =>{
+
+        window.open(
+            "https://wa.me/5514998894962?text="+encodeURIComponent(mensagemWhatsapp),
+            "_blank"
+        );
+
+        modal.classList.remove("show");
+        form.reset();
+
+    }
+
+});
+
+</script>
+<!--balao flutuante-->
+<div id="confirmModal" class="modal">
+    <div class="modal-content">
+        <h3>Confirmar envio</h3>
+
+        <div id="preview"></div>
+
+        <div class="modal-buttons">
+            <button id="cancelBtn" class="btn btn-outline">Cancelar</button>
+            <button id="confirmBtn" class="btn btn-primary">
+                Enviar pelo WhatsApp
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

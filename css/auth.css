@@ -1,0 +1,20 @@
+/* ============================================================
+   AUTH.CSS - Telas de login, cadastro e recuperação de senha
+   ============================================================ */
+.auth-page {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--color-blue-light), var(--color-green-soft));
+  padding: var(--space-md);
+}
+.auth-card {
+  background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-hover);
+  padding: var(--space-lg); width: 100%; max-width: 420px;
+}
+.auth-card .logo { justify-content: center; margin-bottom: var(--space-md); }
+.auth-card h1 { font-size: 1.5rem; text-align: center; margin-bottom: 0.3rem; }
+.auth-card .subtitle { text-align: center; color: var(--color-gray-600); font-size: 0.9rem; margin-bottom: var(--space-md); }
+.auth-card .btn-primary { width: 100%; margin-top: var(--space-xs); }
+.auth-links { text-align: center; margin-top: var(--space-md); font-size: 0.9rem; }
+.auth-links a { color: var(--color-blue-petrol); font-weight: 600; }
+.password-toggle { position: relative; }
+.password-toggle i { position: absolute; right: 14px; top: 42px; color: var(--color-gray-400); cursor: pointer; }

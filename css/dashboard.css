@@ -1,0 +1,78 @@
+/* ============================================================
+   DASHBOARD.CSS
+   Layout compartilhado por dashboard do cliente e painel admin.
+   ============================================================ */
+.app-layout { display: flex; min-height: 100vh; }
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 260px; background: var(--color-white); border-right: 1px solid var(--color-gray-100);
+  padding: var(--space-md); display: flex; flex-direction: column; gap: var(--space-md);
+  position: sticky; top: 0; height: 100vh;
+}
+.sidebar .logo { margin-bottom: var(--space-sm); }
+.sidebar-nav a {
+  display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; border-radius: var(--radius-sm);
+  color: var(--color-gray-600); font-weight: 500; margin-bottom: 0.3rem; transition: all var(--transition-fast);
+}
+.sidebar-nav a i { width: 20px; text-align: center; }
+.sidebar-nav a:hover, .sidebar-nav a.active { background: var(--color-blue-light); color: var(--color-blue-petrol); }
+.sidebar-footer { margin-top: auto; }
+
+/* --- Conteúdo principal --- */
+.main-content { flex: 1; padding: var(--space-lg); max-width: 100%; overflow-x: hidden; }
+.content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-lg); flex-wrap: wrap; gap: var(--space-sm); }
+.content-header h1 { font-size: 1.6rem; }
+.user-chip { display: flex; align-items: center; gap: 0.6rem; }
+.user-chip img { width: 38px; height: 38px; border-radius: 50%; }
+
+/* --- Grid de estatísticas --- */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-sm); margin-bottom: var(--space-lg); }
+.stat-card { display: flex; align-items: center; gap: 1rem; }
+.stat-card .icon { width: 48px; height: 48px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--color-white); background: var(--color-blue-petrol); }
+.stat-card .icon.green { background: var(--color-green-soft-dark); }
+.stat-card .icon.warning { background: var(--color-warning); }
+.stat-card .value { font-size: 1.6rem; font-weight: 700; }
+.stat-card .label { color: var(--color-gray-600); font-size: 0.85rem; }
+
+/* --- Tabelas --- */
+.data-table { width: 100%; border-collapse: collapse; background: var(--color-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft); }
+.data-table th, .data-table td { padding: 0.9rem 1rem; text-align: left; font-size: 0.9rem; }
+.data-table th { background: var(--color-gray-50); color: var(--color-gray-600); font-weight: 600; }
+.data-table tr:not(:last-child) td { border-bottom: 1px solid var(--color-gray-100); }
+.table-actions { display: flex; gap: 0.4rem; }
+
+/* --- Calendário (FullCalendar) --- */
+#calendar-container { background: var(--color-white); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); padding: var(--space-md); }
+.fc-day-available { background: var(--color-blue-light) !important; }
+.fc-day-full { background: #f6d8d8 !important; }
+.fc-day-unavailable { background: var(--color-gray-100) !important; opacity: 0.6; }
+
+/* --- Modal de horários --- */
+.modal-overlay { position: fixed; inset: 0; background: rgba(20,30,35,0.5); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: var(--space-md); }
+.modal-overlay.hidden { display: none; }
+.modal-box { background: var(--color-white); border-radius: var(--radius-md); padding: var(--space-lg); max-width: 480px; width: 100%; max-height: 85vh; overflow-y: auto; }
+.modal-close { float: right; font-size: 1.2rem; color: var(--color-gray-400); }
+.time-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin: var(--space-md) 0; }
+.time-slot { padding: 0.6rem; text-align: center; border: 1.5px solid var(--color-gray-200); border-radius: var(--radius-sm); font-size: 0.9rem; transition: all var(--transition-fast); }
+.time-slot:hover, .time-slot.selected { border-color: var(--color-blue-petrol); background: var(--color-blue-light); }
+.time-slot:disabled { opacity: 0.4; cursor: not-allowed; text-decoration: line-through; }
+
+/* --- Disponibilidade (admin) --- */
+.availability-day { display: grid; grid-template-columns: 130px repeat(3, 1fr) auto; gap: 0.75rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--color-gray-100); }
+.availability-day label.switch { position: relative; display: inline-block; width: 42px; height: 24px; }
+.availability-day .switch input { opacity: 0; width: 0; height: 0; }
+.slider-toggle { position: absolute; cursor: pointer; inset: 0; background: var(--color-gray-200); border-radius: 999px; transition: var(--transition-fast); }
+.slider-toggle::before { content: ""; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: var(--transition-fast); }
+input:checked + .slider-toggle { background: var(--color-blue-petrol); }
+input:checked + .slider-toggle::before { transform: translateX(18px); }
+
+@media (max-width: 900px) {
+  .sidebar { position: fixed; left: -280px; z-index: 1500; transition: left var(--transition-medium); box-shadow: var(--shadow-hover); }
+  .sidebar.open { left: 0; }
+  .mobile-menu-btn { display: inline-flex; }
+}
+@media (min-width: 901px) { .mobile-menu-btn { display: none; } }
+@media (max-width: 600px) {
+  .availability-day { grid-template-columns: 1fr; }
+}

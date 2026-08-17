@@ -1,0 +1,63 @@
+/* ============================================================
+   VARIABLES.CSS
+   Tokens de design do sistema: cores, tipografia, espaçamento,
+   sombras e transições. Alterar aqui reflete em todo o site.
+   ============================================================ */
+
+:root {
+  /* --- Paleta de cores --- */
+  --color-white: #ffffff;
+  --color-gray-50: #f7f9fa;
+  --color-gray-100: #eef1f3;
+  --color-gray-200: #dde3e7;
+  --color-gray-400: #9aa7ae;
+  --color-gray-600: #5c6b73;
+  --color-gray-800: #2b3538;
+
+  --color-blue-light: #dceefb;   /* azul claro - fundos suaves */
+  --color-blue-petrol: #1f5f6b;  /* azul petróleo - cor principal */
+  --color-blue-petrol-dark: #14454f;
+  --color-green-soft: #b9e4d0;   /* verde hospitalar suave */
+  --color-green-soft-dark: #4d9a76;
+
+  --color-success: #3e9a6b;
+  --color-warning: #d99a3d;
+  --color-danger: #c65b5b;
+  --color-info: #3d7ed9;
+
+  /* --- Tipografia --- */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* --- Espaçamento --- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* --- Bordas e sombras --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-soft: 0 4px 20px rgba(31, 95, 107, 0.08);
+  --shadow-hover: 0 8px 30px rgba(31, 95, 107, 0.15);
+
+  /* --- Transições --- */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+
+  /* --- Layout --- */
+  --container-width: 1200px;
+  --header-height: 76px;
+}
+
+/* --- Dark mode (opcional, ativado via classe no body) --- */
+body.dark-mode {
+  --color-white: #16232a;
+  --color-gray-50: #1c2c34;
+  --color-gray-100: #22343d;
+  --color-gray-200: #2c4149;
+  --color-gray-800: #eef1f3;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.35);
+}

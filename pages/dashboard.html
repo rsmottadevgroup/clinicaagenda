@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Área | Clínica Bem Estar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <div id="loading-screen"><div class="spinner"></div></div>
+
+  <div class="app-layout">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="sidebar">
+      <a href="../index.html" class="logo"><i class="fa-solid fa-staff-snake"></i> Bem Estar</a>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active"><i class="fa-solid fa-gauge"></i> Início</a>
+        <a href="agendar.html"><i class="fa-solid fa-calendar-plus"></i> Agendar Consulta</a>
+        <a href="minhas-consultas.html"><i class="fa-solid fa-calendar-check"></i> Minhas Consultas</a>
+        <a href="perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-outline btn-sm" style="width:100%;"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+      </div>
+    </aside>
+
+    <!-- ===================== CONTEÚDO ===================== -->
+    <main class="main-content">
+      <div class="content-header">
+        <button id="sidebar-toggle" class="mobile-menu-btn btn btn-outline btn-sm"><i class="fa-solid fa-bars"></i></button>
+        <h1>Olá, <span id="user-nome">paciente</span> 👋</h1>
+        <div class="user-chip">
+          <img src="https://ui-avatars.com/api/?background=1f5f6b&color=fff&name=Paciente" alt="Avatar" id="user-avatar">
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="card stat-card">
+          <div class="icon"><i class="fa-solid fa-calendar-day"></i></div>
+          <div><div class="value" id="proxima-consulta">--</div><div class="label">Próxima consulta</div></div>
+        </div>
+        <div class="card stat-card">
+          <div class="icon warning"><i class="fa-solid fa-hourglass-half"></i></div>
+          <div><div class="value" id="qtd-pendentes">0</div><div class="label">Aguardando confirmação</div></div>
+        </div>
+        <div class="card stat-card">
+          <div class="icon green"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div><div class="value" id="qtd-historico">0</div><div class="label">Consultas no histórico</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:1rem;">Minhas próximas consultas</h3>
+        <div style="overflow-x:auto;">
+          <table class="data-table">
+            <thead><tr><th>Data</th><th>Horário</th><th>Status</th><th>Ações</th></tr></thead>
+            <tbody id="consultas-tbody"><tr><td colspan="4">Carregando...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging-compat.js"></script>
+  <script src="../config/supabase-config.js"></script>
+  <script src="../config/firebase-config.js"></script>
+  <script src="../js/utils/toast.js"></script>
+  <script src="../js/utils/validators.js"></script>
+  <script src="../js/modules/auth.js"></script>
+  <script src="../js/modules/booking.js"></script>
+  <script src="../js/modules/notifications.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/pages/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disponibilidade | Painel Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <div id="loading-screen"><div class="spinner"></div></div>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a href="../index.html" class="logo"><i class="fa-solid fa-staff-snake"></i> Admin</a>
+      <nav class="sidebar-nav">
+        <a href="admin-dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+        <a href="admin-agendamentos.html"><i class="fa-solid fa-calendar-check"></i> Agendamentos</a>
+        <a href="admin-pacientes.html"><i class="fa-solid fa-users"></i> Pacientes</a>
+        <a href="admin-disponibilidade.html" class="active"><i class="fa-solid fa-clock"></i> Disponibilidade</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-outline btn-sm" style="width:100%;"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+      </div>
+    </aside>
+    <main class="main-content" style="max-width:900px;">
+      <div class="content-header">
+        <button id="sidebar-toggle" class="mobile-menu-btn btn btn-outline btn-sm"><i class="fa-solid fa-bars"></i></button>
+        <h1>Disponibilidade</h1>
+      </div>
+      <p style="color:var(--color-gray-600);margin-bottom:1rem;">
+        Configure os dias e horários em que a clínica atende. O sistema calcula automaticamente todos os horários de consulta disponíveis.
+      </p>
+      <div class="card">
+        <div style="display:grid;grid-template-columns:130px repeat(3, 1fr) auto;gap:0.75rem;font-weight:600;font-size:0.85rem;color:var(--color-gray-600);padding-bottom:0.5rem;">
+          <span>Dia</span><span>Início</span><span>Fim</span><span>Almoço</span><span>Ativo</span>
+        </div>
+        <div id="dias-container">Carregando...</div>
+        <div class="form-group" style="margin-top:1rem;max-width:220px;">
+          <label for="duracao-consulta">Duração da consulta (min)</label>
+          <input type="number" id="duracao-consulta" class="form-control" min="10" step="5" value="30">
+        </div>
+        <button id="salvar-btn" class="btn btn-primary" style="margin-top:1rem;">Salvar disponibilidade</button>
+      </div>
+    </main>
+  </div>
+  <div id="toast-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../config/supabase-config.js"></script>
+  <script src="../js/utils/toast.js"></script>
+  <script src="../js/modules/auth.js"></script>
+  <script src="../js/modules/admin.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/pages/admin-disponibilidade.js"></script>
+</body>
+</html>

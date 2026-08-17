@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Clínica Bem Estar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <div id="loading-screen"><div class="spinner"></div></div>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <a href="../index.html" class="logo" style="display:flex;justify-content:center;"><i class="fa-solid fa-staff-snake"></i> Clínica Bem Estar</a>
+      <h1>Bem-vindo de volta</h1>
+      <p class="subtitle">Entre para acessar seus agendamentos.</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" class="form-control" required autocomplete="email">
+          <span class="form-error"></span>
+        </div>
+        <div class="form-group password-toggle">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" class="form-control" required autocomplete="current-password">
+          <i class="fa-solid fa-eye" id="toggle-senha"></i>
+          <span class="form-error"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Entrar</button>
+      </form>
+
+      <div class="auth-links">
+        <a href="recuperar-senha.html">Esqueci minha senha</a>
+        <p style="margin-top:0.6rem;">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../config/supabase-config.js"></script>
+  <script src="../js/utils/toast.js"></script>
+  <script src="../js/utils/validators.js"></script>
+  <script src="../js/modules/auth.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/pages/login.js"></script>
+</body>
+</html>
